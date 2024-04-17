@@ -1,0 +1,20 @@
+name: Custom Payload Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      custom_data:
+        description: 'Custom data to pass along'
+        required: true
+
+jobs:
+  process_payload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Environment
+        run: echo "Setting up environment..."
+
+      - name: Extract Custom Data
+        run: |
+          custom_data="${{ github.event.inputs.custom_data }}"
+          echo "Custom data received: $custom_data"
