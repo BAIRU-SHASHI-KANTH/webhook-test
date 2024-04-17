@@ -9,11 +9,6 @@ jobs:
   test_hostname_and_configurations:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          node-version: '16'
-
       - name: Display hostname
         run: hostname
 
