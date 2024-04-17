@@ -1,0 +1,25 @@
+name: Hostname and Configurations Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_hostname_and_configurations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Display hostname
+        run: echo "Hostname: $HOSTNAME"
+
+      - name: Display system information
+        run: |
+          echo "Operating System:"
+          cat /etc/os-release
+          echo "Memory Information:"
+          free -m
+          echo "CPU Information:"
+          lscpu
