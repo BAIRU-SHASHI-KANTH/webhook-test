@@ -7,7 +7,7 @@ on:
 
 jobs:
   test_hostname_and_configurations:
-    runs-on: [ubuntu-latest, my-required-runner-config]
+    runs-on: [self-hosted, my-required-runner-config]
     steps:
       - name: Display hostname
         run: hostname
