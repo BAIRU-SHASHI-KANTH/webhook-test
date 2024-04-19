@@ -7,7 +7,7 @@ on:
 
 jobs:
   test_hostname_and_configurations:
-    runs-on: [self-hosted, my-runner]
+    runs-on: my-runner
     steps:
       - name: Display hostname
         run: hostname
